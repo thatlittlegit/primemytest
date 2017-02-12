@@ -20,7 +20,6 @@ function prime() {
   function test() {
     current++;
     let work = true;
-    util.print("TESTING: " + current + " ");
     for (let i = 2; i < current; i++) {
       if (current % i === 0 && i !== 1) {
         work = false;
@@ -41,7 +40,7 @@ function prime() {
         throw e;
       }
     });
-    console.log(out);
+    console.log(current + ": " + out);
   }
 }
 prime();
