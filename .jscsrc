@@ -1,4 +1,5 @@
 {
-  "validateLineBreaks":"CRLF",
+  "preset": "grunt",
+  "validateLineBreaks":"LF",
   "validateQuoteMarks":"\""
 }
