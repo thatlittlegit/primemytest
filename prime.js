@@ -65,3 +65,4 @@ for (; currentValue < max; currentValue += 1) {
 if (benchmarking) {
   console.log("Your score is: " + (Date.now() - start));
 }
+process.exit(0);
