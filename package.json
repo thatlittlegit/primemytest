@@ -11,9 +11,6 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo Hello"
-  },
   "author": "wapidstyle",
   "license": "MIT"
 }

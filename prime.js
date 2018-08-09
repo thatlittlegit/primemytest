@@ -1,7 +1,7 @@
 const argv = require("minimist")(process.argv.slice(2));
 const _ = {
   find: require("lodash.find"),
-  isEmpty: require("lodash.isEmpty")
+  isEmpty: require("lodash.isempty")
 };
 
 let benchmarking = false;
