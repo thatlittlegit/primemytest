@@ -5,7 +5,6 @@ const _ = {
 };
 
 let benchmarking = false;
-let toFile = false;
 let help = false;
 let even = false;
 
@@ -13,7 +12,6 @@ if (!(_.isEmpty(argv._)) ||
     argv.benchmarking || argv.toFile || argv.help || argv.even ||
     argv.b || argv.f || argv.h || argv.e) {
   benchmarking = argv.b || argv.benchmarking || false;
-  toFile = argv.f || argv.toFile || false;
   help = argv.h || argv.help || false;
   even = argv.e || argv.even || false;
 }
@@ -25,9 +23,6 @@ if (help) {
   console.log("");
   console.log("              -b");
   console.log("  --benchmarking  Enable benchmarking mode, to test time until 100K calulated");
-  console.log("");
-  console.log("              -f");
-  console.log("          --file  Write to a file (prime.txt)");
   console.log("");
   console.log("              -e");
   console.log("          --even  Only do odd numbers, except for 2");
