@@ -1,22 +1,9 @@
 const argv = require("minimist")(process.argv.slice(2));
-const _ = {
-  find: require("lodash.find"),
-  isEmpty: require("lodash.isempty")
-};
 
-let benchmarking = false;
-let help = false;
-let even = false;
-let interactive = false;
-
-if (!(_.isEmpty(argv._)) ||
-  argv.benchmarking || argv.toFile || argv.help || argv.even ||
-  argv.b || argv.f || argv.h || argv.e || argv.i || argv.interactive) {
-  benchmarking = argv.b || argv.benchmarking || false;
-  help = argv.h || argv.help || false;
-  even = argv.e || argv.even || false;
-  interactive = argv.i || argv.interactive || false;
-}
+let benchmarking = argv.b || argv.benchmarking || false;
+let help = argv.h || argv.help || false;
+let even = argv.e || argv.even || false;
+let interactive = argv.i || argv.interactive || false;
 
 if (help) {
   console.log("node prime.js [-bfhe]");
