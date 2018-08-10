@@ -2,7 +2,7 @@
   "name": "primemytest",
   "version": "1.0.0",
   "description": "Prime number tester",
-  "main": "prime.js",
+  "main": "index.js",
   "dependencies": {
     "minimist": "^1.2.0"
   },
