@@ -4,7 +4,6 @@
   "description": "Prime number tester",
   "main": "prime.js",
   "dependencies": {
-    "another-progress-bar": "^0.1.2",
     "bluebird": "^3.4.7",
     "lodash.find": "^4.6.0",
     "lodash.isempty": "^4.4.0",

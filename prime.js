@@ -7,13 +7,15 @@ const _ = {
 let benchmarking = false;
 let help = false;
 let even = false;
+let interactive = false;
 
 if (!(_.isEmpty(argv._)) ||
-    argv.benchmarking || argv.toFile || argv.help || argv.even ||
-    argv.b || argv.f || argv.h || argv.e) {
+  argv.benchmarking || argv.toFile || argv.help || argv.even ||
+  argv.b || argv.f || argv.h || argv.e || argv.i || argv.interactive) {
   benchmarking = argv.b || argv.benchmarking || false;
   help = argv.h || argv.help || false;
   even = argv.e || argv.even || false;
+  interactive = argv.i || argv.interactive || false;
 }
 
 if (help) {
@@ -24,40 +26,43 @@ if (help) {
   console.log("              -b");
   console.log("  --benchmarking  Enable benchmarking mode, to test time until 100K calulated");
   console.log("");
+  console.log("              -i");
+  console.log("   --interactive  Enable interactive mode. No effect unless used with --benchmarking.");
+  console.log("");
   console.log("              -e");
   console.log("          --even  Only do odd numbers, except for 2");
   process.exit(0);
 }
 
-let currentValue = 1;
-let max = 100001;
+const findAllPrimesUntilNumberAndCallCallbackForEach = (number, limit, cb, dontDoEvens) => {
+  while (number++ < limit) {
+    if (dontDoEvens ? number % 2 !== 0 : true) cb(number, isPrime(number));
+  }
+}
+
+// This system is much less efficient than the old one. It calculates ALL FACTORS
+// and doesn't stop at the first found, unlike the old system.
+//
+// I don't see a good way to fix this while retaining the current system.
+const isPrime = number => getNumberOfFactors(number) === 0;
+const getNumberOfFactors = number => (
+  [...Array(number)]
+    .map((unused, key) => key > 2 ? number % key === 0 : false)
+    .filter(value => value)
+    .length
+);
 let start = Date.now();
-let bar = require("another-progress-bar")("prime", 60);
 let doEvens = true;
 
-for (; currentValue < max; currentValue += 1) {
-  let isPrime = true;
-  if (currentValue % 2 === 0) {
-    currentValue++;
-  }
-  for (let currentModValue = 2; currentModValue < currentValue + 1; currentModValue += 1) {
-    if (currentValue % currentModValue === 0 && !(currentModValue === 1 || currentModValue === currentValue)) {
-      isPrime = false;
-    }
-  }
-
-  // TODO Make this follow Grunt's styling better
-  if (!benchmarking) {
-    console.log(currentValue + ": " + isPrime);
-  } else {
-    bar.progress(currentValue, max);
-  }
-
-  if (currentValue === 2 && even) {
-    doEvens = true;
-  }
-}
 if (benchmarking) {
-  console.log("Your score is: " + (Date.now() - start));
+  if (interactive) console.log("\x1B[33mWARNING: interactive mode can be slower than non-interactive!\x1B[m");
+  let start = Date.now();
+  findAllPrimesUntilNumberAndCallCallbackForEach(1, 10000, interactive ? number => {
+    process.stdout.write(`\x1B[2K\x1B[1G${String(number).padStart(6, '0')} of 100000 (${String(Date.now() - start).padStart(8, '0')})`);
+  } : () => {});
+
+  if (interactive) console.log("");
+  console.log(Date.now() - start);
+} else {
+    findAllPrimesUntilNumberAndCallCallbackForEach(1, Infinity, (number, result) => console.log(`${number}\t${result}`), even);
 }
-process.exit(0);
