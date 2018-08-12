@@ -4,7 +4,7 @@
   "description": "Prime number tester",
   "main": "index.js",
   "dependencies": {
-    "minimist": "^1.2.0"
+    "commander": "^2.17.1"
   },
   "devDependencies": {},
   "author": "wapidstyle",
