@@ -40,7 +40,7 @@ program
     })
 
 program
-    .command('calculate', {isDefault: true})
+    .command('calculate')
     .alias('c')
     .description('calculate prime numbers and output to STDOUT')
     .action(() => {
