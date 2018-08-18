@@ -20,7 +20,7 @@ const program = require("commander");
 
 program
     .version(JSON.parse(require('fs').readFileSync('package.json', 'utf-8')).version)
-    .option('-e, --even', 'only do odd numbers');
+    .option('-o, --odds', 'only do odd numbers');
 
 program
     .command('benchmarking')
@@ -33,7 +33,7 @@ program
         let start = Date.now();
         findAllPrimesUntilNumberAndCallCallbackForEach(1, 10000, interactive ? number => {
             process.stdout.write(`\x1B[2K\x1B[1G${String(number).padStart(6, '0')} of 100000 (${String(Date.now() - start).padStart(8, '0')})`);
-        } : () => {}, Boolean(program.even));
+        } : () => {}, Boolean(program.odds));
 
         if (interactive) console.log("");
         console.log(Date.now() - start);
@@ -44,7 +44,7 @@ program
     .alias('c')
     .description('calculate prime numbers and output to STDOUT')
     .action(() => {
-        findAllPrimesUntilNumberAndCallCallbackForEach(1, Infinity, (number, result) => console.log(`${number}\t${result}`), Boolean(program.even));
+        findAllPrimesUntilNumberAndCallCallbackForEach(1, Infinity, (number, result) => console.log(`${number}\t${result}`), Boolean(program.odds));
     });
 
 program.parse(process.argv);
