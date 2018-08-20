@@ -9,12 +9,13 @@ const findAllPrimesUntilNumberAndCallCallbackForEach = (number, limit, cb, dontD
 //
 // I don't see a good way to fix this while retaining the current system.
 const isPrime = number => getNumberOfFactors(number) === 0;
-const getNumberOfFactors = number => (
-  [...Array(number)]
-    .map((unused, key) => key > 2 ? number % key === 0 : false)
-    .filter(value => value)
-    .length
-);
+const getNumberOfFactors = number => {
+  let found = 0;
+  for(let index = 2; index < number; index++)
+    if(number % index === 0) found += 1;
+
+  return found;
+};
 
 module.exports = {
 	findAllPrimesUntilNumberAndCallCallbackForEach,
