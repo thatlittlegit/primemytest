@@ -16,6 +16,12 @@ const getNumberOfFactors = number => (
     .length
 );
 
+module.exports = {
+	findAllPrimesUntilNumberAndCallCallbackForEach,
+	isPrime,
+	getNumberOfFactors
+};
+
 const program = require("commander");
 
 program
@@ -47,4 +53,4 @@ program
         findAllPrimesUntilNumberAndCallCallbackForEach(1, Infinity, (number, result) => console.log(`${number}\t${result}`), Boolean(program.odds));
     });
 
-program.parse(process.argv);
+if (require.main === module) program.parse(process.argv);
