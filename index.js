@@ -42,7 +42,7 @@ program
 			console.log('\u001B[33mWARNING: interactive mode can be slower than non-interactive!\u001B[m');
 		}
 		const start = Date.now();
-		findAllPrimesUntilNumberAndCallCallbackForEach(1, 10000, interactive ? number => {
+		findAllPrimesUntilNumberAndCallCallbackForEach(1, 100000, interactive ? number => {
 			process.stdout.write(`\u001B[2K\u001B[1G${String(number).padStart(6, '0')} of 100000 (${String(Date.now() - start).padStart(8, '0')})`);
 		} : () => {}, Boolean(program.odds));
 
