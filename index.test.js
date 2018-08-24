@@ -1,20 +1,20 @@
-const assert = require('assert');
 const {isPrime, getNumberOfFactors, findAllPrimesUntilNumberAndCallCallbackForEach} = require('.');
-let stack = '';
 
-let isPrimeResults = [
-	null,  // 0 (not tested)
-	null,  // 1 (not tested)
-	true,  // 2
-	true,  // 3
+const stack = '';
+
+const isPrimeResults = [
+	null, // 0 (not tested)
+	null, // 1 (not tested)
+	true, // 2
+	true, // 3
 	false, // 4
-	true,  // 5
+	true, // 5
 	false, // 6
-	true,  // 7
+	true, // 7
 	false, // 8
-	false  // 9
+	false // 9
 ];
-let getNumberOfFactorsResults = [
+const getNumberOfFactorsResults = [
 	0,
 	0,
 	1,
@@ -30,7 +30,9 @@ let getNumberOfFactorsResults = [
 	['isPrime', () => {
 		try {
 			for (let index = 0; index < 10; index++) {
-				if (isPrimeResults[index] !== null && isPrime(index) !== isPrimeResults[index]) throw new Error(`FAIL on ${index}: ${isPrime(index)} v.s. ${isPrimeResults[index]}`);
+				if (isPrimeResults[index] !== null && isPrime(index) !== isPrimeResults[index]) {
+					throw new Error(`FAIL on ${index}: ${isPrime(index)} v.s. ${isPrimeResults[index]}`);
+				}
 			}
 			return true;
 		} catch (e) {
@@ -38,11 +40,13 @@ let getNumberOfFactorsResults = [
 			return false;
 		}
 	}],
-	['getNumberOfFactors', () => [...Array(10)].map((unused, index) => getNumberOfFactors(index) === getNumberOfFactorsResults[index]).reduce((x, y) => x || y) === true],
+	['getNumberOfFactors', () => [...new Array(10)].map((unused, index) => getNumberOfFactors(index) === getNumberOfFactorsResults[index]).reduce((x, y) => x || y) === true],
 	['findAllPrimesUntilNumberAndCallCallbackForEach', () => {
 		try {
 			findAllPrimesUntilNumberAndCallCallbackForEach(1, 9, (number, result) => {
-				if (result !== isPrime(number)) throw new Error(); // fail
+				if (result !== isPrime(number)) {
+					throw new Error(`FAIL on ${number}: ${isPrime(number)} v.s. ${result}`);
+				} // Fail
 			});
 			return true;
 		} catch (e) {
