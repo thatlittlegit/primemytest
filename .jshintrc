@@ -1,3 +1,33 @@
 {
-  "esversion":6
+    // [based on] JSHint Default Configuration File (as on JSHint website)
+    // See http://jshint.com/docs/ for more details
+
+    "maxerr"        : 50,       // {int} Maximum error before stopping
+
+    // Enforcing
+    "bitwise"       : true,     // true: Prohibit bitwise operators (&, |, ^, etc.)
+    "curly"         : true,     // true: Require {} for every new block or scope
+    "eqeqeq"        : true,     // true: Require triple equals (===) for comparison
+    "forin"         : true,     // true: Require filtering for..in loops with obj.hasOwnProperty()
+    "freeze"        : true,     // true: prohibits overwriting prototypes of native objects such as Array, Date etc.
+    "latedef"       : true,     // true: Require variables/functions to be defined before being used
+    "noarg"         : true,     // true: Prohibit use of `arguments.caller` and `arguments.callee`
+    "noempty"       : true,     // true: Prohibit use of empty blocks
+    "nonbsp"        : true,     // true: Prohibit "non-breaking whitespace" characters.
+    "undef"         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
+    "unused"        : true,     // Unused variables:
+                                //   true     : all variables, last function parameter
+                                //   "vars"   : all variables only
+                                //   "strict" : all variables, all function parameters
+    "strict"        : true,     // true: Requires all functions run in ES5 Strict Mode
+    "varstmt"       : true,     // true: Disallow any var statements. Only `let` and `const` are allowed.
+
+    // Relaxing
+    "eqnull"        : true,      // true: Tolerate use of `== null`
+    "esversion"     : 6,         // {int} Specify the ECMAScript version to which the code must adhere.
+    "shadow"        : true,      // true: Allows re-define variables later in code e.g. `var x=1; x=2;`
+
+    // Environments
+    "devel"         : true,     // Development/debugging (alert, confirm, etc)
+    "node"          : true      // Node.js
 }

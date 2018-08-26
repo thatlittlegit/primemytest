@@ -3,9 +3,6 @@
  */
 function prime() {
   "use strict";
-  const jQuery = require("jquery");
-  const $ = jQuery;
-  const util = require("util");
   let current = 0;
   let run = true;
 

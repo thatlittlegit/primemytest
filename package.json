@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Prime number tester",
   "main": "prime.js",
-  "dependencies": {
-    "jquery": "^2.2.1"
+  "dependencies": {},
+  "devDependencies": {
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.6"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo Hello"
+    "test": "jscs -p airbnb prime.js && jshint prime.js"
   },
   "author": "wapidstyle",
   "license": "MIT"
