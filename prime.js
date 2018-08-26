@@ -6,14 +6,6 @@ function prime() {
   let current = 0;
   let run = true;
 
-  const rl = require("readline").createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  rl.on("line", function(){
-    run = false;
-  });
-
   function test() {
     current++;
     let work = true;
