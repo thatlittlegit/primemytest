@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#findAllPrimesUntilNumberAndCallCallbackForEach">findAllPrimesUntilNumberAndCallCallbackForEach</a></li><li><a href="global.html#getNumberOfFactors">getNumberOfFactors</a></li><li><a href="global.html#isPrime">isPrime</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>PrimeMyTest <a href="https://travis-ci.org/thatlittlegit/primemytest"><img src="https://img.shields.io/travis/thatlittlegit/primemytest.svg" alt="Travis CI"></a></h1><p>PrimeMyTest simply generates prime numbers. It is written in node.js.</p>
+<h2>Usage</h2><p>After installing dependencies with <code>npm install</code>, run <code>node index.js --help</code>.</p>
+<h3>Flags</h3><p>To only run on odd numbers: <code>--odds</code></p>
+<h4>Calculation Mode</h4><p>Use the <code>calculate</code> subcommand to output the prime status infinitely in TSV
+format.</p>
+<h4>Benchmarking Mode</h4><p>Using the <code>benchmarking</code> subcommand will calculate the prime status of all the
+numbers until 100,000. Use the <code>--interactive</code> flag to inform you of its status
+as it runs.</p>
+<h3>Output Format</h3><h4>Calculation Mode</h4><p>By default, PrimeMyTest outputs in TSV format. The first column is the number;
+the second is the value in a boolean format (<code>true</code> or <code>false</code>).</p>
+<p>For example:</p>
+<pre class="prettyprint source lang-shell"><code>$ node index.js calculate | head
+2       true
+3       true
+4       false
+5       true
+6       false
+7       true
+8       false
+9       false
+10      false
+11      true
+^C
+$ # the program does not automatically terminate :(</code></pre><h4>Benchmarking Mode</h4><p>In non-interactive (default) mode, the amount of milliseconds since the program
+started is put on stdout.</p>
+<p>For example:</p>
+<pre class="prettyprint source lang-shell"><code>$ node index.js benchmarking
+48345
+$</code></pre><h5>Interactive Mode</h5><p><em>Not recommended for parsing!</em> It's designed for use in the Terminal.</p>
+<p>Outputs a warning in yellow about preformance, and then outputs <code>XXXXXX of
+100000 (YYYYYYYY)</code>, where <code>X</code> is the current number and <code>Y</code> is the current
+score. <code>X</code> is padded to 6 with zeros, <code>Y</code> to 8.</p>
+<p>For example:</p>
+<pre class="prettyprint source lang-shell"><code>$ node index.js benchmarking --interactive
+WARNING: interactive mode can be slower than non-interactive!
+100000 of 100000 (00048345)
+48345</code></pre><p>You may note it is slightly slower.</p>
+<h2>License</h2><p>PrimeMyTest is licensed under the MIT License.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated at Sun Aug 26 2018 19:55:18 GMT+0000 (UTC)
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
