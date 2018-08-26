@@ -2,7 +2,7 @@
   PrimeMyTest 1.0.0
  */
 function prime() {
-  "use strict";
+  'use strict';
 
   function test(current) {
     let isPrime = true;
@@ -16,14 +16,16 @@ function prime() {
     return isPrime;
   }
 
-  for (let current = 0;; current++){
+  for (let current = 0;; current++) {
     let out = test(current);
-    require("fs").appendFile("prime.txt", current + ": " + out, "utf-8", function(e) {
+    require('fs').appendFile('prime.txt', current + ': ' + out, 'utf-8', function (e) {
       if (e) {
         throw e;
       }
     });
-    console.log(current + ": " + out);
+
+    console.log(current + ': ' + out);
   }
 }
+
 prime();
