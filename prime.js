@@ -3,27 +3,21 @@
  */
 function prime() {
   "use strict";
-  let current = 0;
-  let run = true;
 
-  function test() {
-    current++;
-    let work = true;
+  function test(current) {
+    let isPrime = true;
     for (let i = 2; i < current; i++) {
       if (current % i === 0 && i !== 1) {
-        work = false;
+        isPrime = false;
         break;
       }
     }
-    if (work === false) {
-      return false;
-    } else {
-      return true;
-    }
+
+    return isPrime;
   }
-  let out;
-  while (run === true) {
-    out = test();
+
+  for (let current = 0;; current++){
+    let out = test(current);
     require("fs").appendFile("prime.txt", current + ": " + out, "utf-8", function(e) {
       if (e) {
         throw e;
