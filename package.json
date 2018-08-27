@@ -4,7 +4,7 @@
   "description": "Prime number tester",
   "main": "index.js",
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo && nyc ava",
     "docs": "jsdoc -R README.md -t node_modules/latodoc index.js"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "ava": "^0.25.0",
     "jsdoc": "^3.5.5",
     "latodoc": "github:smeijer/latodoc",
+    "nyc": "^12.0.2",
     "xo": "^0.22.0"
   },
   "author": "wapidstyle",
