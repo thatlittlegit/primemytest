@@ -4,7 +4,7 @@ node_js:
     - "8.11.4"
 
 before_deploy:
-    - npm run docs
+    - npm run cidocs
 
 deploy:
     provider: pages
