@@ -17,14 +17,10 @@ function prime() {
   }
 
   for (let current = 0;; current++) {
-    let out = test(current);
-    require('fs').appendFile('prime.txt', current + ': ' + out, 'utf-8', function (e) {
-      if (e) {
-        throw e;
-      }
-    });
+    let out = `${current}: ${test(current)}`;
 
-    console.log(current + ': ' + out);
+    require('fs').appendFileSync('prime.txt', `${out}\n`, 'utf-8');
+    console.log(out);
   }
 }
 
