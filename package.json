@@ -17,5 +17,6 @@
     "xo": "^0.22.0"
   },
   "author": "wapidstyle",
-  "license": "MIT"
+  "license": "MIT",
+  "bin": "cli.js"
 }
