@@ -20,10 +20,10 @@ program
 			process.stdout.write(`\u001B[2K\u001B[1G${String(number).padStart(6, '0')} of 100000 (${String(Date.now() - start).padStart(8, '0')})`);
 		} : () => {}, Boolean(program.odds));
 
-		if (interactive) { 
-			console.log(''); 
-		} 
-		console.log(Date.now() - start); 
+		if (interactive) {
+			console.log('');
+		}
+		console.log(Date.now() - start);
 	});
 
 program
