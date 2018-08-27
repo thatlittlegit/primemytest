@@ -1,3 +1,5 @@
 node_modules/
-prime.txt
-.swp
+*.swp
+out/
+.nyc_output/
+coverage/

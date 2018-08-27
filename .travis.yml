@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+    - "node"
+    - "8.11.4"
+
+before_deploy:
+    - npm run ci
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    local-dir: out
+    keep-history: true
+    on:
+        all_branches: true
