@@ -1,5 +1,5 @@
-node_modules/
+javascript/node_modules/
 *.swp
-out/
-.nyc_output/
-coverage/
+javascript/out/
+javascript/.nyc_output/
+javascript/coverage/

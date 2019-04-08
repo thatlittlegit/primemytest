@@ -4,13 +4,13 @@ node_js:
     - "8.11.4"
 
 before_deploy:
-    - npm run ci
+    - cd javascript && npm run ci
 
 deploy:
     provider: pages
     skip-cleanup: true
     github-token: $GITHUB_TOKEN
-    local-dir: out
+    local-dir: javascript/out
     keep-history: true
     on:
         all_branches: true
