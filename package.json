@@ -9,15 +9,15 @@
     "ci": "npm run docs && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
-    "commander": "^2.17.1"
+    "commander": "^2.20.0"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "codecov": "^3.0.4",
+    "ava": "^1.4.1",
+    "codecov": "^3.3.0",
     "jsdoc": "^3.5.5",
     "latodoc": "github:smeijer/latodoc",
-    "nyc": "^12.0.2",
-    "xo": "^0.22.0"
+    "nyc": "^13.3.0",
+    "xo": "^0.24.0"
   },
   "author": "wapidstyle",
   "license": "MIT",
