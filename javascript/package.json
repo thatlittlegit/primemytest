@@ -12,11 +12,11 @@
     "commander": "^2.20.0"
   },
   "devDependencies": {
-    "ava": "^1.4.1",
-    "codecov": "^3.3.0",
-    "jsdoc": "^3.5.5",
+    "ava": "^2.1.0",
+    "codecov": "^3.5.0",
+    "jsdoc": "^3.6.2",
     "latodoc": "github:smeijer/latodoc",
-    "nyc": "^13.3.0",
+    "nyc": "^14.1.1",
     "xo": "^0.24.0"
   },
   "author": "wapidstyle",
