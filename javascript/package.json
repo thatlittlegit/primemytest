@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "xo && nyc ava",
-    "docs": "jsdoc -R README.md -t node_modules/latodoc index.js",
-    "ci": "npm run docs && nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "ci": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "commander": "^2.20.3"
@@ -14,8 +13,6 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "codecov": "^3.6.1",
-    "jsdoc": "^3.6.3",
-    "latodoc": "github:smeijer/latodoc",
     "nyc": "^14.1.1",
     "xo": "^0.24.0"
   },
