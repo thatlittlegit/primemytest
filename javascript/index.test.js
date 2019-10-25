@@ -21,16 +21,3 @@ test('isPrime', t => {
 		}
 	}
 });
-
-test('findAllPrimesUntilNumberAndCallCallbackForEach', t => {
-	findAllPrimesUntilNumberAndCallCallbackForEach(1, 9, (number, result) => {
-		t.is(result, isPrime(number));
-	});
-});
-
-test('findAllPrimesUntilNumberAndCallCallbackForEach with dontDoEvens', t => {
-	findAllPrimesUntilNumberAndCallCallbackForEach(1, 9, (number, result) => {
-		t.not(number % 2, 0);
-		t.is(result, isPrime(number));
-	}, true);
-});
