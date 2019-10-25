@@ -4,7 +4,7 @@ node_js:
     - "8.11.4"
 
 before_deploy:
-    - cd javascript && npm run ci
+    - cd javascript && npm test
 
 deploy:
     provider: pages

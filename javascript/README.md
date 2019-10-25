@@ -1,4 +1,4 @@
-# Node.js primemytest [![Travis CI](https://img.shields.io/travis/thatlittlegit/primemytest.svg)](https://travis-ci.org/thatlittlegit/primemytest) [![Codecov](https://img.shields.io/codecov/c/github/thatlittlegit/primemytest.svg)](https://codecov.io/gh/thatlittlegit/primemytest)
+# Node.js primemytest [![Travis CI](https://img.shields.io/travis/thatlittlegit/primemytest.svg)](https://travis-ci.org/thatlittlegit/primemytest)
 PrimeMyTest simply generates prime numbers. It is written in node.js.
 
 ## Usage
