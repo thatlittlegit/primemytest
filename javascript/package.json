@@ -1,6 +1,6 @@
 {
   "name": "primemytest",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Prime number tester",
   "main": "index.js",
   "scripts": {

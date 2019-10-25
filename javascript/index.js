@@ -1,28 +1,19 @@
 /**
-  * Get the number of factors in a given number, starting at two.
-  *
-  * @param {Number} number The number to generate it for.
-  * @returns {Number} The number of factors.
-  */
-const getNumberOfFactors = number => {
-	let found = 0;
-	for (let index = 2; index < number; index++) {
-		if (number % index === 0) {
-			found += 1;
-		}
-	}
-
-	return found;
-};
-
-/**
-  * Checks if the number of factors in a given number, aside from zero and one,
-  * is zero.
+  * Checks if the number is a prime number.
   *
   * @param {Number} number The number to test.
   * @returns {Boolean} If it is a prime number.
   */
-const isPrime = number => getNumberOfFactors(number) === 0;
+const isPrime = number => {
+	const limit = Math.sqrt(number);
+	for (let index = 2; index <= limit; index++) {
+		if (number % index === 0) {
+			return false;
+		}
+	}
+
+	return true;
+};
 
 /**
   * From `number` to `limit`, call `cb` with the current number and whether or
@@ -44,7 +35,6 @@ const findAllPrimesUntilNumberAndCallCallbackForEach = (number, limit, cb, dontD
 
 module.exports = {
 	findAllPrimesUntilNumberAndCallCallbackForEach,
-	isPrime,
-	getNumberOfFactors
+	isPrime
 };
 

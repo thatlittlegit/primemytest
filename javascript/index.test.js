@@ -1,5 +1,5 @@
 import test from 'ava';
-import {isPrime, getNumberOfFactors, findAllPrimesUntilNumberAndCallCallbackForEach} from '.';
+import {isPrime, findAllPrimesUntilNumberAndCallCallbackForEach} from '.';
 
 test('isPrime', t => {
 	const results = [
@@ -19,26 +19,6 @@ test('isPrime', t => {
 		if (results[index] !== null) {
 			t.is(isPrime(index), results[index]);
 		}
-	}
-});
-
-test('getNumberOfFactors', t => {
-	const results =
-		[
-			0, // 0
-			0, // 1
-			0, // 2
-			0, // 3
-			1, // 4
-			0, // 5
-			2, // 6
-			0, // 7
-			2, // 8
-			1 // 9
-		];
-
-	for (let index = 0; index < 10; index++) {
-		t.is(getNumberOfFactors(index), results[index]);
 	}
 });
 
