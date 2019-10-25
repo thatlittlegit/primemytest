@@ -9,12 +9,12 @@
     "ci": "npm run docs && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
-    "commander": "^2.20.0"
+    "commander": "^2.20.3"
   },
   "devDependencies": {
-    "ava": "^2.1.0",
-    "codecov": "^3.5.0",
-    "jsdoc": "^3.6.2",
+    "ava": "^2.4.0",
+    "codecov": "^3.6.1",
+    "jsdoc": "^3.6.3",
     "latodoc": "github:smeijer/latodoc",
     "nyc": "^14.1.1",
     "xo": "^0.24.0"
