@@ -1,6 +1,8 @@
-all: primemytest
-primemytest: prime.o
+LDLIBS=-lm
+
+all: prime
+prime: prime.o
 clean:
-	rm -f primemytest prime.o
+	rm -f prime prime.o
 
 .PHONY: clean
