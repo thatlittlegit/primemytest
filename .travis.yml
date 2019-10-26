@@ -6,3 +6,4 @@ node_js:
 script:
     - "sh c/compare.sh"
     - "sh javascript/compare.sh"
+    - "sh perl/compare.sh"
