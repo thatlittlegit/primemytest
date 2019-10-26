@@ -4,7 +4,7 @@
   "description": "Prime number tester",
   "main": "index.js",
   "scripts": {
-    "test": "node index.test.js"
+    "test": "sh compare.sh"
   },
   "author": "wapidstyle",
   "license": "MIT",
