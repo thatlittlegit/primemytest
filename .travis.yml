@@ -4,5 +4,5 @@ node_js:
     - "12.13.0"
 
 script:
-    - "cd javascript && npm test   && cd .."
-    - "cd c          && make prime && cd .."
+    - "sh c/compare.sh"
+    - "sh javascript/compare.sh"
