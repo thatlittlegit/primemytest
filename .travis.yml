@@ -1,16 +1,8 @@
 language: node_js
 node_js:
     - "node"
-    - "8.11.4"
+    - "12.13.0"
 
-before_deploy:
-    - cd javascript && npm test
-
-deploy:
-    provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN
-    local-dir: javascript/out
-    keep-history: true
-    on:
-        all_branches: true
+script:
+    - "cd javascript && npm test   && cd .."
+    - "cd c          && make prime && cd .."
