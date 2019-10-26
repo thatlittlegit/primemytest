@@ -5,18 +5,18 @@
   * @returns {Boolean} If it is a prime number.
   */
 module.exports = number => {
-	const limit = Math.sqrt(number);
-	for (let index = 2; index <= limit; index++) {
-		if (number % index === 0) {
-			return false;
-		}
-	}
+  const limit = Math.sqrt(number)
+  for (let index = 2; index <= limit; index++) {
+    if (number % index === 0) {
+      return false
+    }
+  }
 
-	return true;
-};
+  return true
+}
 
 if (require.main === module) {
-	for (let i = 2; i <= 100000; i++) {
-		console.log(`${i}\t${module.exports(i)}`);
-	}
+  for (let i = 2; i <= 100000; i++) {
+    console.log(`${i}\t${module.exports(i)}`)
+  }
 }

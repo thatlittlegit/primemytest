@@ -4,10 +4,7 @@
   "description": "Prime number tester",
   "main": "index.js",
   "scripts": {
-    "test": "xo"
-  },
-  "devDependencies": {
-    "xo": "^0.24.0"
+    "test": "node index.test.js"
   },
   "author": "wapidstyle",
   "license": "MIT",

@@ -9,5 +9,10 @@ in a TSV-like format:
 number	true/false
 ```
 
+## Code Style
+No linter is included in the dependencies, but please follow
+[JavaScript Standard Style](https://standardjs.com). You can
+try `npx standard` to check the style.
+
 ## License
 PrimeMyTest is licensed under the MIT License.
