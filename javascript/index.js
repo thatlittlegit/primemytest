@@ -14,3 +14,9 @@ module.exports = number => {
 
 	return true;
 };
+
+if (require.main === module) {
+	for (let i = 2; i <= 100000; i++) {
+		console.log(`${i}\t${module.exports(i)}`);
+	}
+}

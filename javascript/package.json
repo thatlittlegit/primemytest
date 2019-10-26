@@ -11,5 +11,5 @@
   },
   "author": "wapidstyle",
   "license": "MIT",
-  "bin": "cli.js"
+  "bin": "index.js"
 }

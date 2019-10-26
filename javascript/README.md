@@ -2,7 +2,7 @@
 PrimeMyTest simply generates prime numbers. It is written in node.js.
 
 ## Usage
-Run `node cli.js`. A file of prime numbers will be outputted
+Run `node index.js`. A file of prime numbers will be outputted
 in a TSV-like format:
 
 ```
